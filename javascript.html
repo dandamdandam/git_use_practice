@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript_HTML에_적용하기</title>
+        <meta charset="utf-8">
+        <meta name="description" content="css 요약 및 정리">
+        <meta name="author" content="정다연">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header><h1>JavaScript 배우기</h1></header>
+        <div id="my-grid">
+        <ol id="index">
+            <li><a href="html.html">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+            <li><a href="other.html">Other</a></li>
+        </ol>
+        <article>
+            <p><h2>html과 javascript의 만남</h2>
+                방법1: &lt;script&gt;쓰고 안에 작성
+                <br>방법2: 이벤트. input속성 태그 안에 onclick/onchange/onkeydown 등등의 속성 쓰고 그 뒤에 작성
+                <br>방법3: js(자바스크립트파일) 불러오기. script태그 안에 src속성을 넣어 불러올 수 있다.
+                <br>방법4: 개발자모드에서 콘솔 창에 들어가기. 현재 웹페이지를 대상으로 javascipt를 쓸 수 있다. </p>
+            <p><h2>데이터 타입</h2>
+                <ul>
+                    <li>boolean</li>
+                    <li>null</li>
+                    <li>undefined</li>
+                    <li>number: 숫자 통틀어서</li>
+                    <li>string: +연산 가능.</li>
+                    <li>symbol</li>
+                </ul></p>
+            <p><h2>기본과 다른 것들</h2>
+                <ul>
+                    <li>==: ===</li>
+                    <li>\n: &lt;br&gt;</li>
+                    <li>def: function</li>
+                    <li>디렉터리를 객체라고 부른다. 
+                        <br>차이점1: 함수를 담을 수 있음
+                        <br>차이점2: 객체이름.key로 value를 소환할 수 있음
+                        <br>+ 객체 안에 포함된 함수: 메서드, 변수: 프로퍼티.
+                    </li>
+                    <li>반복문: 
+                        <br>자바처럼 for(var i=0; i&lt;n; i++){}
+                        <br>파이썬처럼 for(var key in direc){}</li>
+                </ul></p>
+            <p><h2>배운 함수 목록___</h2>
+                <ul>
+                    <li>document.write(): 문서에 써준다. 괄호 안에 문자열은 물론 계산식까지 쓸 수 있음</li>
+                    <li>document.querySelector(): 괄호 안의 css선택자를 선택한다. 여러 개면 첫번째 것만 선택</li>
+                    <li>document.querySelectorAll(): 위와 같이 선택해서 노드리스트(배열과 비슷함)로 돌려준다.</li>
+                    <li>this: 이벤트로 쓰는 javascript에 적용가능. 해당 input을 선택한다.</li>
+                    <li>alert(): 괄호안 내용으로 경고 창을 띄움.</li>
+                    <br>
+                    <li>string.toUpperCase(): 대문자로 바꾸어 줌.</li>
+                    <li>string.indexOf(s key): string에서 key의 인덱스를 리턴. 없으면 -1.</li>
+                    <br>
+                    <li>array.push(): 파이썬의 list.append()와 같음.</li>
+                </ul></p>
+            <p><h2>배운 속성(properties) 목록___</h2>
+                <ul>
+                    <li>웹페이지 중 대상.style: 웹페이지 중 대상의 style. 변수처럼 변경할 수 있다.
+                        <br>뒤에 다른 속성 .color, .backgroudColor 등 쓸 수 있다.
+                    </li>
+                    <br>
+                    <li>string.length: 길이 리턴</li>
+                    <br>
+                </ul></p>
+        </article>
+        </div>
+    </body>
+</html>

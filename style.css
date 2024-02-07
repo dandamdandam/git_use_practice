@@ -1,0 +1,64 @@
+body{
+    background-color: black;
+    color:darkgray;
+}
+html{background-color: black;}
+a{color:cadetblue;}
+a:active{ color:green;}
+a:hover{color: yellow;}
+a:focus{
+  background-color: black;
+  color:white;
+}
+#my-grid{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+#my-grid ol{
+    padding-left: 33px;
+    line-height: 200%;
+    font-size: 20px;
+}
+#my-grid article{
+    border-left: 2px solid darkgray;
+    padding-left: 33px;
+    padding-top: 33px;
+}
+h1{
+    padding-bottom:0.6em;
+    margin-bottom: 0px;
+    border-bottom: 5px double darkgray;
+}
+
+.accordion-body, .accordion-button, .form-control {
+    background-color: black;
+    color:darkgray;
+}
+article select, input{
+    background-color:rgb(50, 59, 69);
+    color: darkgray;
+    border: 1px solid darkgray;
+}
+
+@media(max-width:700px){
+    #my-grid{
+        display: block;
+    }
+    #my-grid #index{
+        padding-left:20px;
+        text-align : center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        border-bottom: 5px double darkgray;
+    }
+    #index li{
+        display: inline;
+    }
+    #my-grid article{
+        border-left: 0;
+        padding-left: 0;
+    }
+    h1{
+        border-bottom: 0;
+    }
+}
