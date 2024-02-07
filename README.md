@@ -64,6 +64,17 @@ Changes to be committed:
 ```
 5. git에 완전히 올리기 위해선 commit을 해야 합니다. `git commit -m "{커밋 메세지. 현재 변경사항에 라벨을 붙이는 용도입니다. 아무거나 적어주세요}"`. 실행후에 다시 git status를 보면, 1과같은 메세지가 뜹니다. 성공입니다.
 6. 이 시점에서 github 링크로 들어가면 변화가 없을 것 입니다. github에 올라와 있는 내용은 원격저장소의 내용이고, 우리가 지금까지 한 것은 로컬저장소에 변경사항을 commit하는 작업이였기 때문입니다. 원격저장소에 로컬저장소의 내용을 올리기 위해서는 `git push`를 사용해야합니다.
+    <br/>    이 떄 아래와 같은 오류가 뜬다면, clone 이후에 누군가의 push나 사이트에서의 직접 변경으로 인한 원격저장소의 변화가 있었기 때문입니다. `git pull` 명령어를 먼저 실행한 후 `git push`를 다시 실행해보세요.
+    ```
+        To https://github.com/dandamdandam/git_use_practice.git
+         ! [rejected]        main -> main (fetch first)
+        error: failed to push some refs to 'https://github.com/dandamdandam/git_use_practice.git'
+        hint: Updates were rejected because the remote contains work that you do
+        hint: not have locally. This is usually caused by another repository pushing
+        hint: to the same ref. You may want to first integrate the remote changes
+        hint: (e.g., 'git pull ...') before pushing again.
+        hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+    ```
 
 - 결론적으로 원격저장소에 변경사항을 올리기 위해서는 로컬저장소의 내용을 push 해야합니다. 로컬 저장소의 내용은 `git add` 명령어로 파일을 staged 상태로 만든 후에, `git commit`명령어를 실행해야합니다.
 > 파일 변경 -> `git add .` -> `git commit -m {커밋메세지}` -> `git push`
