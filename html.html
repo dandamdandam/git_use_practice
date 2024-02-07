@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<head>
+	<title>HTML_만들기</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="html의 요소에 대한 짧은 설명과 태그와 속성 요약 및 정리">
+	<meta name="author" content="정다연">
+	<script src="pack.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+		crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1 class="display-1">HTML만들기</h1>
+	</header>
+	<div id="my-grid">
+	<ol id="index">
+		<li><a href="html.html">HTML</a></li>
+		<li><a href="css.html">CSS</a></li>
+		<li><a href="javascript.html">JavaScript</a></li>
+		<li><a href="other.html">Other</a></li>
+	</ol>
+	<article>
+		<a href="https://www.youtube.com/watch?v=OGFgdro160I&list=PLuHgQVnccGMDUzDDCKW-pCZQY-MMCX5yB"
+			target="_blank">생활코딩 유튜브 참고</a>
+		<div class="accordion" id="accordionExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingOne">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse"
+						data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+						태그
+					</button>
+				</h2>
+				<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+					data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						특정 글씨 앞 뒤에 들어가는 태그를 시작태그와 닫히는 태그로 부름.
+						"&lt;태그&gt;내용&lt;/태그&gt;"형식.
+						<ul>태그종류____
+							<!--a-->
+							<li>a(anchor 약자): 링크달기</li>
+							<!--b-->
+							<li>body: 본문인 내용을 묶어주기 위해 씀.</li>
+							<li>br: 줄바꿈.(시작 태그만 있어도 됨)</li>
+							<!--d-->
+							<li>div: 웹페이지를 꾸밀때 그룹핑함(블록단위).</li>
+							<!--f-->
+							<li>form: 사용자 입력 묶기.</li>
+							<!--h-->
+							<li>h[n](heading n 약자): 머리말 표시. h1은 본문의 맨 위 HTML만들기 처럼 됨.(0&lt;n&lt;7)</li>
+							<li>head: 본문이 아니고 문서를 꾸며주는 내용일 때 그 내용을 묶어주기 위해 씀.</li>
+							<li>html: html문서 전체 묶기.</li>
+							<!--i-->
+							<li>img: 이미지 표시(시작태그만 있어도 됨)⇒<input type="button" value="nero image" onclick="popup();"></li>
+							<li>input: 사용자 입력</li>
+							<!--l-->
+							<li>label: 사용자 입력 앞또는 뒤에 적는 아이디: 비밀번호: 같은 것을 묶음. 해당하는 사용자 입력태그랑 같이 묶으면 for 속성 필요없이 쓸 수 있음.</li>
+							<li>li(list 약자): 목록 작성. 앞에 점 달아줌. 어디부터 어디까지가 연관된 항목인지 구분하기 위해 부모태그 필요.</li>
+							<!--m-->
+							<li>meta: html 문서 전체를 설명하는 정보표현. (시작태그만.)</li>
+							<!--o-->
+							<li>ol(ordered list): li들을 순서있는 그룹으로 묶기</li>
+							<li>option: 선택지를 만듬.</li>
+							<!--p-->
+							<li>p: 단락 구분.</li>
+							<!--u-->
+							<li>u: 밑줄 ⇒<u>밑줄글씨</u></li>
+							<li>ul(unordered list): li들을 순서없는 그룹으로 묶기.</li>
+							<!--s-->
+							<li>script: 자바 스크립트 쓸때 씀.</li>
+							<li>select: option 태그를 묶어 선택할 수 있는 박스 만듬.
+								<br>⇒
+									<select>
+										<option>똥맛 카레</option>
+										<option>카레맛 똥</option>
+									</select>
+							</li>
+							<li>span: 웹페이지를 꾸밀때 그룹핑함(인라인단위).</li>
+							<li>strong: 중간글씨를 강조(굵은글씨로)⇒<strong>굵은글씨</strong></li>
+							<!--t-->
+							<li>table: 표만들기. 테이블데이터 등등을 묶어줌.</li>
+							<li>tbody: 표의 정보에 해당하는 열을 태그로 묶어 구분. 시각적차이 없음.</li>
+							<li>td(table date의 약자): 표데이터 만들기. 항목하나하나를 태그로 묶어주기.</li>
+							<li>textarea: 사용자 입력(여러줄일때.)
+								<br>⇒
+									<form class="input-group">
+										<textarea class="form-control" type="text" placeholder="위에서 본 네로 사진에 대한 감상문을 써주세요 "
+											aria-label="nero report"></textarea>
+										<button class="btn btn-outline-secondary" type="reset">reset</button>
+									</form>
+							</li>
+							<li>tfoot: 표의 값총량등을 표시하는 열을 태그로 묶어 구분. 어느 위치에 쓰건 표의 맨 밑에 위치하게 됨.</li>
+							<li>th(table head약자): 유형을 구분하는 표의 데이터 하나하나을 묶어 굵은 글씨, 중앙정렬로 표시함.</li>
+							<li>thead(table head 약자): 표의 끝부분, 유형을 구분하는 데이터의 열을 태그로써 따로 묶어 구별함. 어느 위치에 쓰건 표의 맨 위에 위치하게 됨.</li>
+							<li>title: 탭에 제목으로 표시해줌.</li>
+							<li>tr(table row의 약자): 같은 행에 속하는 td태그를 묶어 행으로 만듬.</li>
+						</ul>
+						<ul>의미론적 태그 종류______
+							<!--a-->
+							<li>article: 본문.</li>
+							<li>aside: 광고 등 페이지의 내용과 관계과 없는 내용.</li>
+							<!--d-->
+							<li>details: 화면에 표시되지 않는 정보.</li>
+							<!--f-->
+							<li>figure: 삽화나 다이어그램같은 부가적 정보.</li>
+							<li>footer: 헤더 밑에 부가적인 정보 예)개인보호정책, 회사소개...</li>
+							<!--h-->
+							<li>header: 제목. 사이트 전체에 대한 정보 포함 한거.</li>
+							<!--m-->
+							<li>mark: 강조나 하이라이트 표시 필요한 문자 표시</li>
+							<li>main: 문서에서 가장 중심이 되는 컨텐츠</li>
+							<!--n-->
+							<li>nav: 웹페이지 탐색시 사용하는 부분.</li>
+							<!--s-->
+							<li>section: 문서의 구획을 정의(다른 의미론적 태그로 묶기 애매한 걸 묶음) 예)본문 묶음.</li>
+							<!--t-->
+							<li>time: 시간 표시</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingTwo">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						속성
+					</button>
+				</h2>
+				<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+					data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						시작태그 뒤에 적음. 속성의 이름에 따라 기능이 정해짐.
+						<ul>속성종류___
+							<!--a-->
+							<li>action="링크": form태그랑. 사용자 입력값을 링크에 보냄.</li>
+							<li>alt(alternative text 약자)="사진의 속성(임의지정)": img태그와 같이사진이 깨졌을 때 표시해주는 문자.</li>
+							<!--b-->
+							<li>border="숫자": table태그와 같이. 표에 윤곽선 새김. 숫자는 윤곽선을 얼마나 두껍게 만들지.</li>
+							<!--c-->
+							<li>charset(character set약자)="인코딩": meta랑. 문자의 규칙 나타냄. 보통 utf-8씀.</li>
+							<li>checked: input태그의 type속성을 radio나 checkbox로 했을 때 사용가능. 기본으로 체크되어 있게 함.</li>
+							<li>cols="숫자": textarea랑. 숫자만큼의 글자를 입력할 수 있게 보이는 칸의 가로(열)이 커짐.</li>
+							<li>colspan="숫자": td또는 th태그와 같이 씀. 가로로 길게 숫자만큼 병함됨(열 병합).</li>
+							<li>content="내용": mate태그와 name 속성과 함께. name 속성에 해당하는(description, keywords, author 등) 내용을 씀.</li>
+							<!--f-->
+							<li>for="문자": label태그랑. 라벨이 어떤 사용자 입력의 이름표인지 나타냄. 문자에는 id속성에 쓴 문자를 씀.</li>
+							<!--h-->
+							<li>href="링크": a태그와 같이. 어떤 링크로 들어갈지 표시. 파이썬 디렉터리 처럼 같은 열려있는 링크와 열려는 링크의 앞쪽이 반복될 때 뒤쪽만 써줘도 됨.</li>
+							<!--i-->
+							<li>id="문자": 사용자 입력값의 링크 비슷한걸 정함. css의 아이디 선택자를 위한 태그</li>
+							<!--m-->
+							<li>method="유형": form이랑. 정보를 어떤식으로 서버에 전송할지 결정.
+								<br>
+								<table class="table table-dark table-striped-columns">
+									<thead>
+										<th>유형</th>
+										<th>설명</th>
+									</thead>
+									<tr>
+										<td>get</td>
+										<td>정보를 URL에 포함해서 보냄.</td>
+									</tr>
+									<tr>
+										<td>post</td>
+										<td>다른 방법으로 정보를 끼워서 보냄.</td>
+									</tr>
+								</table>
+							</li>
+							<li>multiple: select랑. 사용자가 컨트롤 키를 누르며 선택하면 다중선택할 수 있게 함.</li>
+							<!--n-->
+							<li>name="속성(임의지정)": 사용자 입력, meta 태그와 함께. 사용자 입력값의 속성을 정함.</li>
+							<!--r-->
+							<li>rows="숫자": textarea랑. 숫자만큼의 글자를 입력할 수 있게 보이는 칸의 세로(행)이 커짐.</li>
+							<li>rowspan="숫자": td또는 th태그와 같이 씀. 세로로 길게 숫자만큼 병합됨(행 병합).</li>
+							<!--s-->
+							<li>src="사진이름": img 태그와 같이. 사진 불러옴.</li>
+							<!--t-->
+							<li>target="_blank": a태그와 같이. 새창으로 링크를 띄움.</li>
+							<li>title="띄울 정보": 마우스를 갖다 댈대 띄울 정보를 정함.</li>
+							<li>type="유형":input태그와 같이. 사용자가 입력하는 데이터의 유형을 결정.
+								<br>
+								<table class="table table-dark table-striped-columns">
+									<thead>
+										<th>유형</th>
+										<th>설명</th>
+									</thead>
+									<tr>
+										<td>text</td>
+										<td>사용자 입력값이 텍스트일때.</td>
+									</tr>
+									<tr>
+										<td>password</td>
+										<td>사용자 입력값일때. 화면에서 입력하는 값이 안보이게 처리됨.</td>
+									</tr>
+									<tr>
+										<td>submit</td>
+										<td>서버에 form으로 묶인 다른 사용자 입력값을 제출함.</td>
+									</tr>
+									<tr>
+										<td>radio</td>
+										<td>체크박스 만듬. 여러개의 체크박스 중 하나만 선택할 수 있게 하려면 name속성으로써 모든 체크박스를 한 이름으로 묶기. </td>
+									</tr>
+									<tr>
+										<td>checkbox</td>
+										<td>체크박스 만듬. 라디오와는 다르게 같은 이름으로 해도 다중선택 가능.</td>
+									</tr>
+									<tr>
+										<td>reset</td>
+										<td>form으로 묶인 다른 사용자 입력값을 초기화 시키는 버튼 만듬.</td>
+									</tr>
+									<tr>
+										<td>button</td>
+										<td>버튼 UI만듬.</td>
+									</tr>
+									<tr>
+										<td>hidden</td>
+										<td>사용자의 조작없이 value값을 끼워서 서버에 보냄.</td>
+									</tr>
+									<tr>
+										<td>file</td>
+										<td>사용자의 컴퓨터에서 파일을 불러올 수 있게함. 메소드 속성은 포스트로 enctype속성을 multipart/form-date로 지정해야
+											함.</td>
+									</tr>
+								</table>
+							</li>
+							<!--v-->
+							<li>value="문자": input이랑. 사용자 입력하는 칸에 기본으로 문자를 적어놓고 띄움./option이랑. 서버에 실제로 보내지는 값을 설정.</li>
+							<!--w-->
+							<li>width (or) height="숫자": img태그와 같이. 사진의 가로(width), 세로(height)를 정함. 단위는 픽셀. 하나만하면 사진 비율대로 줄어들음.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingThree">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						그 외
+					</button>
+				</h2>
+				<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+					data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<h2>DOCTYPE</h2>
+						어떤 표준을 다르고 있는 태그인지 알려줌. ! DOCTYPE html로 씀.
+						</p>
+						<p>
+						<h2>검색엔진 최적화(SEO)</h2>
+						+조언. 너무 가이드를 따르게 되면 스팸으로 간주되어 뜨지 않게 될 수도 있음.
+						<a href="https://static.googleusercontent.com/media/www.google.com/ko//intl/ko/webmasters/docs/search-engine-optimization-starter-guide-ko.pdf"
+							target="_blank">구글 검색엔진 최적화 가이드</a>
+						</p>
+						<p>
+						<h2>특수문자</h2>
+						&lt;와 같은 특수문자는 태그에 섞여 오류가 날 위험이 있다.
+						<br>그래서 &amp;로 시작해서 가운에 특정 키워드를 넣고&#59;로 끝내는 방식으로 특수문자를 표현한다.
+						<p>(자주쓰는)특수문자 종류
+						<ul>
+							<li>&lt;, &gt;: lt(less than), gt</li>
+							<li>&amp;: amp</li>
+							<li>&#59;: #59</li>
+							<li>&quot;: quot</li>
+							<li>&nbsp;: nbsp</li>
+						</ul>
+						</p>
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</article>
+	</div>
+</body>
+
+</html>

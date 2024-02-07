@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS를_HTML에_적용하기</title>
+  <meta name="description" content="css 요약 및 정리">
+  <meta name="author" content="정다연">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header><h1>CSS배우기</h1></header>
+  <div id="my-grid">
+		<ol id="index">
+			<li><a href="html.html">HTML</a></li>
+			<li><a href="css.html">CSS</a></li>
+			<li><a href="javascript.html">JavaScript</a></li>
+			<li><a href="other.html">Other</a></li>
+		</ol>
+<article>
+<a href="https://www.youtube.com/watch?v=ONcmkf07EuI&list=PLuHgQVnccGMDaVaBmkX0qfB45R_bYrV62" target="_blank">생활코딩 유튜브 참고</a>
+	<p><h2>html에 css문법이 포함된다는 것을 표현하기 위해 쓰는 단어: style</h2>
+		<br>방법1: 태그 형식으로 써서 h1, li 등등의 스타일을 동일하게 한다.
+		<br>방법2: 속성 형식으로 써서 특정 태그안에 있는 글만 꾸민다.
+	</p>
+	<p><h2>css의 요소들</h2>
+ 		<ul>
+			<li>selector(선택자): 공통적으로 꾸며줄 대상. 스타일 태그 안의 중괄호 앞에 씀.</li>
+			<li>declatation(선언): 속성과 값으로 이루어진 하나의 명령. 세미콜론으로 명령을 구분한다.</li>
+			<li>property(속성): 색, 글씨크기 등.</li>
+			<li>value(값): 속성을 구체적으로 어떻게 바꿀지 알려줌.</li>
+	</ul>
+	</p>
+	<p><h2>css의 특징들</h2>
+		<ul>
+			<li>css적용 우선 순위: html의 style들 &gt; id 선택자 &gt; 클래스 선택자 &gt; 태그이름 선택자 &gt; 상위객체에 의해 상속된 속성</li>
+			<li>박스모델: 태그가 차지하는 공간
+				<br>그 태그의 성격과 일반적인 쓰임에 따라서 크기가 달라진다.
+				<br>크기에 따라 block level element(화면전체), inline element(그 콘텐츠 크기)로 나뉜다.
+				<br>display : block 또는 inline으로 설정 가능
+			</li>
+			<li>그리드: 여러 자식 태그를 가지고 있는 부모태그를 그리드로 묶어 마음대로 배치
+				<br>display: grid;로 하고, grid-template-columns: 자식의 한 줄 만큼[150px 1fr;]
+			</li>
+			<li>반응형 웹 디자인: 화면크기의 변화에 따라 웹의 디자인이 바뀌는 것
+				<br>미디어 쿼리 사용 ↓
+				<br>@media(min-width:800px){}: 화면의 크기가 800보다 크면 중괄호 안의 문장 실행
+			</li>
+		</ul>
+	</p>
+	<p>
+		<h2>선택자의 종류</h2>
+		<ol>
+			<li>태그 선택자: 선택자로 지정한 태그를 선택.</li>
+			<li>아이디 선택자: html의 속성을 통해 지정한 id를 통해 선택. 단 #id이름으로 적어야함.</li>
+			<li>클래스 선택자: id와 방법과 결과는 비슷함. 단, 여러개에 동시에 효과를 주고 싶을 때 사용. 단, .class이름으로 적어야함.</li>
+			<li>이외의 다양한 선택자
+				<li>다음링크에서 게임으로 배우기. --><a href="https://flukeout.github.io/" target="_blank">flukeout.github.io</a></li>
+				<li>구글에 cheat sheet 쳐서 활용하기</li>
+			</li>
+		</ol>
+		<br><strong>특이한 선택자 문법</strong>
+		<ul>
+			<li>부모 자식 선택자
+				<p>좀 더 세부화해서 선택하고 싶을 때 사용.
+					<br>  ex)ol 아래의 모든 li를 선택하고 싶을 때|||ol li
+					<br>+직계 자손만 선택
+					<br>  ex)id가 top인 태그 바로 아래에 있는 li를 선택하고 싶을 때|||#id>li
+				</p>
+			</li>
+			<li>여러 선택자에 대해 같은 효과를 적용하고 싶을 때|||ol, ul</li>
+			<li>가상클래스선택자 실험용 링크 ==> <a href="https://google.com">방문함</a> <a href="https://dayeon/nero">방문안함</a>
+				<p>
+					<br>객체:active ==> 마우스로 클릭한 객체 선택자
+					<br>객체:hover ==> 마우스를 올린(롤오버한) 객체 선택자
+					<br>  +만약 롤오버한 동시에 클릭한다면, 뒤쪽에 있는 선언을 선택한다. (여기선 hover가 뒤에 있다)
+					<br>a:visited ==> 방문했던 링크 선택자
+					<br>a:link ==> 방문한적 없는 링크 선택자
+					<br>객체:focus ==> 객체를 클릭하거나 tab키를 누르면 포커스 상태로 들어가게 되는데, 이때의 선택자. 가장 뒤에 넣는 것이 좋음.
+				</p>
+			</li>
+		</ul>
+	</p>
+	<p>
+		<h2>속성의 종류</h2>
+		<ol>
+			<!--b-->
+			<li>background-color: 배경 색</li>
+			<li>border(-top..): 경계선(값에는 굵기[5px] 유형[solid] 색[red](순서는 관계 없음)) </li>
+			<!--c-->
+			<li>color: 내용의 색</li>
+			<!--d-->
+			<li>display: 어떻게 보일지(값에는 block, inline, none 등)</li>
+			<!--g-->
+			<li>grid-template-colunms: 그리드 한 줄에 있는 각각의 박스들 크기를 정함</li>
+			<!--m-->
+			<li>margin(-top..): 경계와 다른 박스 사이의 여유</li>
+			<!--p-->
+			<li>padding: 콘텐츠와 경계 사이의 여유</li>
+			<!--w-->
+			<li>width, height: 가로, 세로</li>
+		</ol>
+	</p>
+
+</article>
+</div>
+</body>
+</html>
